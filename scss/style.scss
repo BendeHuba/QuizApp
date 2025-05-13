@@ -54,6 +54,8 @@ body{
 
     height: 100%;
 
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15), -1px -1px 2px rgba(255, 255, 255, 0.15);
+
     :not(.dark-mode) &{
         @include theme(true);
     }
@@ -76,6 +78,9 @@ body.dark-mode{
 }
 
 .button{
+    user-select: none;
+    cursor: pointer;
+
     border-radius: 4px;
     border: 0px;
     font-size: 20px;
@@ -94,13 +99,17 @@ body.dark-mode{
     &#button-dark-mode{
         @extend .button;
 
+        border-radius: 10px;
+
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 50px;
+        width: 40px;
+        height: 40px;
 
         &:hover{
-            height: 60px;
+            width: 50px;
+            height: 50px;
         }
 
         #button-dark-mode-light{
@@ -132,18 +141,72 @@ body.dark-mode{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    h1{
+        user-select: none;
+
+        margin: 0 auto;
+
+        font-size: 20vh;
+        white-space: nowrap;
+
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4), -1px -1px 2px rgba(255, 255, 255, 0.3);
+
+        @media (max-width: 768px) {
+          font-size: 15vh;
+        }
     
-    font-size: 20vh;
-    white-space: nowrap;
-
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4), -1px -1px 2px rgba(255, 255, 255, 0.3);
-
-    @media (max-width: 768px) {
-      font-size: 15vh;
+        @media (max-width: 542px) {
+          font-size: 12vh;
+        }
     }
-  
-    @media (max-width: 480px) {
-      font-size: 12vh;
+
+    @mixin button-to-go{
+        user-select: none;
+        cursor: pointer;
+
+        margin: 0 auto;
+        padding: 5px;
+        white-space: nowrap;
+
+        transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, background-color 0.3s, color 0.3s;
+
+        font-size: 8vh;
+
+        @media (max-width: 768px) {
+            font-size: 6vh;
+        }
+      
+        @media (max-width: 542px) {
+            font-size: 5vh;
+        }
+        &:hover, &:focus{
+            @include applyButtonTheme();
+        }
+    }
+
+    .button-to-flex{
+        margin: 0 auto;
+
+        padding: 0;
+        white-space: nowrap;
+        display: flex;
+
+        &-left{
+            justify-self: left;
+            justify-content: left;
+        }
+        &-right{
+            justify-self: right;
+            justify-content: right;
+        }
+    }
+
+    #button-to-create{
+        @include button-to-go;
+    }
+    #button-to-play{
+        @include button-to-go;
     }
 }
 

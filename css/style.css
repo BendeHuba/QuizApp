@@ -3,6 +3,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
   font-family: "Fjalla One", "Courier New", Courier, monospace;
   height: 100%;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15), -1px -1px 2px rgba(255, 255, 255, 0.15);
 }
 :not(.dark-mode) body {
   background-color: aqua;
@@ -25,6 +26,8 @@ body.dark-mode {
 }
 
 .button, .button#button-dark-mode {
+  user-select: none;
+  cursor: pointer;
   border-radius: 4px;
   border: 0px;
   font-size: 20px;
@@ -44,13 +47,16 @@ body:not(.dark-mode) .button, body:not(.dark-mode) .button#button-dark-mode {
   width: 60px;
 }
 .button#button-dark-mode {
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 .button#button-dark-mode:hover {
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 .button#button-dark-mode #button-dark-mode-light {
   padding: 0px;
@@ -71,19 +77,91 @@ body:not(.dark-mode) .button#button-dark-mode #button-dark-mode-dark {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.main-header h1 {
+  user-select: none;
+  margin: 0 auto;
   font-size: 20vh;
   white-space: nowrap;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4), -1px -1px 2px rgba(255, 255, 255, 0.3);
 }
 @media (max-width: 768px) {
-  .main-header {
+  .main-header h1 {
     font-size: 15vh;
   }
 }
-@media (max-width: 480px) {
-  .main-header {
+@media (max-width: 542px) {
+  .main-header h1 {
     font-size: 12vh;
   }
+}
+.main-header .button-to-flex {
+  margin: 0 auto;
+  padding: 0;
+  white-space: nowrap;
+  display: flex;
+}
+.main-header .button-to-flex-left {
+  justify-self: left;
+  justify-content: left;
+}
+.main-header .button-to-flex-right {
+  justify-self: right;
+  justify-content: right;
+}
+.main-header #button-to-create {
+  user-select: none;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 5px;
+  white-space: nowrap;
+  transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, background-color 0.3s, color 0.3s;
+  font-size: 8vh;
+}
+@media (max-width: 768px) {
+  .main-header #button-to-create {
+    font-size: 6vh;
+  }
+}
+@media (max-width: 542px) {
+  .main-header #button-to-create {
+    font-size: 5vh;
+  }
+}
+body.dark-mode .main-header #button-to-create:hover, body.dark-mode .main-header #button-to-create:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
+}
+body:not(.dark-mode) .main-header #button-to-create:hover, body:not(.dark-mode) .main-header #button-to-create:focus {
+  background-color: white;
+  color: aqua;
+}
+.main-header #button-to-play {
+  user-select: none;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 5px;
+  white-space: nowrap;
+  transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, background-color 0.3s, color 0.3s;
+  font-size: 8vh;
+}
+@media (max-width: 768px) {
+  .main-header #button-to-play {
+    font-size: 6vh;
+  }
+}
+@media (max-width: 542px) {
+  .main-header #button-to-play {
+    font-size: 5vh;
+  }
+}
+body.dark-mode .main-header #button-to-play:hover, body.dark-mode .main-header #button-to-play:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
+}
+body:not(.dark-mode) .main-header #button-to-play:hover, body:not(.dark-mode) .main-header #button-to-play:focus {
+  background-color: white;
+  color: aqua;
 }
 
 footer {
