@@ -1,0 +1,28 @@
+body {
+  background-color: aqua;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aqua;
+  padding: 5px;
+}
+.navbar .button {
+  font-variant: small-caps;
+}
+
+.button {
+  border-radius: 4px;
+  border: 0px;
+  font-size: 20px;
+  padding: 5px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+.button:hover {
+  width: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */
