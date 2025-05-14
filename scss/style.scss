@@ -48,8 +48,48 @@ $padding: 5px;
     }
 }
 
+@mixin button-to-go{
+    user-select: none;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 5px;
+    white-space: nowrap;
+    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, background-color 0.3s, color 0.3s;
+
+    &:hover, &:focus{
+        @include applyButtonTheme();
+    }
+
+    font-size: 8vh;
+    @media (max-width: 768px) {
+        font-size: 6vh;
+    }
+  
+    @media (max-width: 542px) {
+        font-size: 5vh;
+    }
+    
+
+}
+
+@mixin button-to-go-no-resize{
+    user-select: none;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 5px;
+    white-space: nowrap;
+    transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, background-color 0.3s, color 0.3s;
+
+    &:hover, &:focus{
+        @include applyButtonTheme();
+    }
+}
+
 body{
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, opacity 1s ease-in-out;
+
+    opacity: 0;
+
     font-family: 'Fjalla One','Courier New', Courier, monospace;
 
     height: 100%;
@@ -63,6 +103,9 @@ body{
 }
 body.dark-mode{
     @include theme(false);
+}
+body.fade-in{
+    opacity: 1;
 }
 
 .navbar{
@@ -94,6 +137,11 @@ body.dark-mode{
 
     &:hover{
         width: 60px;
+    }
+
+    &-to-go
+    {
+        @include button-to-go-no-resize;
     }
 
     &#button-dark-mode{
@@ -142,6 +190,8 @@ body.dark-mode{
     left: 50%;
     transform: translate(-50%, -50%);
 
+    transition: transform 0.1s ease; 
+
     h1{
         user-select: none;
 
@@ -158,30 +208,6 @@ body.dark-mode{
     
         @media (max-width: 542px) {
           font-size: 12vh;
-        }
-    }
-
-    @mixin button-to-go{
-        user-select: none;
-        cursor: pointer;
-
-        margin: 0 auto;
-        padding: 5px;
-        white-space: nowrap;
-
-        transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, background-color 0.3s, color 0.3s;
-
-        font-size: 8vh;
-
-        @media (max-width: 768px) {
-            font-size: 6vh;
-        }
-      
-        @media (max-width: 542px) {
-            font-size: 5vh;
-        }
-        &:hover, &:focus{
-            @include applyButtonTheme();
         }
     }
 
@@ -214,4 +240,8 @@ footer{
     position: absolute;
     bottom: 10px;
     left: 10px;
+}
+
+label{
+    user-select: none;
 }
