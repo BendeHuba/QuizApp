@@ -122,17 +122,17 @@ const home = document.getElementById("home");
 button_to_create?.addEventListener("click", async e=>{
     document.body.classList.remove('fade-in');
     await sleep(1000);
-    document.location.href = "/create.html";
+    document.location.href = "./create.html";
 });
 button_to_play?.addEventListener("click", async e=>{
     document.body.classList.remove('fade-in');
     await sleep(1000);
-    document.location.href = "/play.html";
+    document.location.href = "./play.html";
 });
 home?.addEventListener("click", async e=>{
     document.body.classList.remove('fade-in');
     await sleep(1000);
-    document.location.href = "/index.html";
+    document.location.href = "./index.html";
 });
 
 window.onload = function() {
