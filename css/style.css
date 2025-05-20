@@ -6,11 +6,34 @@ body {
   height: 100%;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15), -1px -1px 2px rgba(255, 255, 255, 0.15);
 }
-:not(.dark-mode) body {
+body.color-blue.dark-mode {
+  background-color: rgb(4, 88, 88);
+  color: rgb(223, 223, 223);
+}
+body.color-blue:not(.dark-mode) {
   background-color: aqua;
   color: white;
 }
-
+body.color-orange.dark-mode {
+  background-color: rgb(138, 95, 17);
+  color: rgb(223, 223, 223);
+}
+body.color-orange:not(.dark-mode) {
+  background-color: orange;
+  color: white;
+}
+body.color-purple.dark-mode {
+  background-color: rgb(128, 0, 160);
+  color: rgb(223, 223, 223);
+}
+body.color-purple:not(.dark-mode) {
+  background-color: rgb(204, 0, 255);
+  color: white;
+}
+body:not(.dark-mode) {
+  background-color: aqua;
+  color: white;
+}
 body.dark-mode {
   background-color: rgb(4, 88, 88);
   color: rgb(223, 223, 223);
@@ -40,13 +63,37 @@ body.fade-in {
   width: 50px;
   transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, background-color 0.3s, color 0.3s;
 }
-body.dark-mode .button, body.dark-mode .button#button-dark-mode {
+body.color-blue.dark-mode .button, body.color-blue.dark-mode .button#button-dark-mode {
   background-color: rgb(223, 223, 223);
   color: rgb(4, 88, 88);
+}
+body.color-blue:not(.dark-mode) .button, body.color-blue:not(.dark-mode) .button#button-dark-mode {
+  background-color: white;
+  color: aqua;
+}
+body.color-orange.dark-mode .button, body.color-orange.dark-mode .button#button-dark-mode {
+  background-color: rgb(223, 223, 223);
+  color: rgb(138, 95, 17);
+}
+body.color-orange:not(.dark-mode) .button, body.color-orange:not(.dark-mode) .button#button-dark-mode {
+  background-color: white;
+  color: orange;
+}
+body.color-purple.dark-mode .button, body.color-purple.dark-mode .button#button-dark-mode {
+  background-color: rgb(223, 223, 223);
+  color: rgb(128, 0, 160);
+}
+body.color-purple:not(.dark-mode) .button, body.color-purple:not(.dark-mode) .button#button-dark-mode {
+  background-color: white;
+  color: rgb(204, 0, 255);
 }
 body:not(.dark-mode) .button, body:not(.dark-mode) .button#button-dark-mode {
   background-color: white;
   color: aqua;
+}
+body.dark-mode .button, body.dark-mode .button#button-dark-mode {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
 }
 .button:hover, .button#button-dark-mode:hover {
   width: 60px;
@@ -59,13 +106,37 @@ body:not(.dark-mode) .button, body:not(.dark-mode) .button#button-dark-mode {
   white-space: nowrap;
   transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, background-color 0.3s, color 0.3s;
 }
-body.dark-mode .button-to-go:hover, body.dark-mode .button-to-go:focus {
+body.color-blue.dark-mode .button-to-go:hover, body.color-blue.dark-mode .button-to-go:focus {
   background-color: rgb(223, 223, 223);
   color: rgb(4, 88, 88);
+}
+body.color-blue:not(.dark-mode) .button-to-go:hover, body.color-blue:not(.dark-mode) .button-to-go:focus {
+  background-color: white;
+  color: aqua;
+}
+body.color-orange.dark-mode .button-to-go:hover, body.color-orange.dark-mode .button-to-go:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(138, 95, 17);
+}
+body.color-orange:not(.dark-mode) .button-to-go:hover, body.color-orange:not(.dark-mode) .button-to-go:focus {
+  background-color: white;
+  color: orange;
+}
+body.color-purple.dark-mode .button-to-go:hover, body.color-purple.dark-mode .button-to-go:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(128, 0, 160);
+}
+body.color-purple:not(.dark-mode) .button-to-go:hover, body.color-purple:not(.dark-mode) .button-to-go:focus {
+  background-color: white;
+  color: rgb(204, 0, 255);
 }
 body:not(.dark-mode) .button-to-go:hover, body:not(.dark-mode) .button-to-go:focus {
   background-color: white;
   color: aqua;
+}
+body.dark-mode .button-to-go:hover, body.dark-mode .button-to-go:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
 }
 .button#button-dark-mode {
   border-radius: 10px;
@@ -140,13 +211,37 @@ body:not(.dark-mode) .button#button-dark-mode #button-dark-mode-dark {
   transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, background-color 0.3s, color 0.3s;
   font-size: 8vh;
 }
-body.dark-mode .main-header #button-to-create:hover, body.dark-mode .main-header #button-to-create:focus {
+body.color-blue.dark-mode .main-header #button-to-create:hover, body.color-blue.dark-mode .main-header #button-to-create:focus {
   background-color: rgb(223, 223, 223);
   color: rgb(4, 88, 88);
+}
+body.color-blue:not(.dark-mode) .main-header #button-to-create:hover, body.color-blue:not(.dark-mode) .main-header #button-to-create:focus {
+  background-color: white;
+  color: aqua;
+}
+body.color-orange.dark-mode .main-header #button-to-create:hover, body.color-orange.dark-mode .main-header #button-to-create:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(138, 95, 17);
+}
+body.color-orange:not(.dark-mode) .main-header #button-to-create:hover, body.color-orange:not(.dark-mode) .main-header #button-to-create:focus {
+  background-color: white;
+  color: orange;
+}
+body.color-purple.dark-mode .main-header #button-to-create:hover, body.color-purple.dark-mode .main-header #button-to-create:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(128, 0, 160);
+}
+body.color-purple:not(.dark-mode) .main-header #button-to-create:hover, body.color-purple:not(.dark-mode) .main-header #button-to-create:focus {
+  background-color: white;
+  color: rgb(204, 0, 255);
 }
 body:not(.dark-mode) .main-header #button-to-create:hover, body:not(.dark-mode) .main-header #button-to-create:focus {
   background-color: white;
   color: aqua;
+}
+body.dark-mode .main-header #button-to-create:hover, body.dark-mode .main-header #button-to-create:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
 }
 @media (max-width: 768px) {
   .main-header #button-to-create {
@@ -167,13 +262,37 @@ body:not(.dark-mode) .main-header #button-to-create:hover, body:not(.dark-mode) 
   transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease, background-color 0.3s, color 0.3s;
   font-size: 8vh;
 }
-body.dark-mode .main-header #button-to-play:hover, body.dark-mode .main-header #button-to-play:focus {
+body.color-blue.dark-mode .main-header #button-to-play:hover, body.color-blue.dark-mode .main-header #button-to-play:focus {
   background-color: rgb(223, 223, 223);
   color: rgb(4, 88, 88);
+}
+body.color-blue:not(.dark-mode) .main-header #button-to-play:hover, body.color-blue:not(.dark-mode) .main-header #button-to-play:focus {
+  background-color: white;
+  color: aqua;
+}
+body.color-orange.dark-mode .main-header #button-to-play:hover, body.color-orange.dark-mode .main-header #button-to-play:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(138, 95, 17);
+}
+body.color-orange:not(.dark-mode) .main-header #button-to-play:hover, body.color-orange:not(.dark-mode) .main-header #button-to-play:focus {
+  background-color: white;
+  color: orange;
+}
+body.color-purple.dark-mode .main-header #button-to-play:hover, body.color-purple.dark-mode .main-header #button-to-play:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(128, 0, 160);
+}
+body.color-purple:not(.dark-mode) .main-header #button-to-play:hover, body.color-purple:not(.dark-mode) .main-header #button-to-play:focus {
+  background-color: white;
+  color: rgb(204, 0, 255);
 }
 body:not(.dark-mode) .main-header #button-to-play:hover, body:not(.dark-mode) .main-header #button-to-play:focus {
   background-color: white;
   color: aqua;
+}
+body.dark-mode .main-header #button-to-play:hover, body.dark-mode .main-header #button-to-play:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
 }
 @media (max-width: 768px) {
   .main-header #button-to-play {
@@ -190,10 +309,67 @@ footer {
   position: absolute;
   bottom: 10px;
   left: 10px;
+  width: calc(100vw - 10px);
 }
 
 label {
   user-select: none;
+}
+
+.menu-container {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  flex-direction: row-reverse;
+}
+.menu-container .menu-content {
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+  pointer-events: none;
+}
+body.dark-mode .menu-container .menu-content.color-blue {
+  background-color: rgb(4, 88, 88);
+  color: rgb(223, 223, 223);
+}
+body:not(.dark-mode) .menu-container .menu-content.color-blue {
+  background-color: aqua;
+  color: white;
+}
+body.dark-mode .menu-container .menu-content.color-orange {
+  background-color: rgb(138, 95, 17);
+  color: rgb(223, 223, 223);
+}
+body:not(.dark-mode) .menu-container .menu-content.color-orange {
+  background-color: orange;
+  color: white;
+}
+body.dark-mode .menu-container .menu-content.color-purple {
+  background-color: rgb(128, 0, 160);
+  color: rgb(223, 223, 223);
+}
+body:not(.dark-mode) .menu-container .menu-content.color-purple {
+  background-color: rgb(204, 0, 255);
+  color: white;
+}
+body.dark-mode .menu-container .menu-content {
+  background-color: rgb(4, 88, 88);
+  color: rgb(223, 223, 223);
+}
+body:not(.dark-mode) .menu-container .menu-content {
+  background-color: aqua;
+  color: white;
+}
+.menu-container:hover .menu-content,
+.menu-container .menu-content:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
+  pointer-events: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

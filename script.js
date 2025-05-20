@@ -14,6 +14,45 @@ else
 {
     document.body.classList.remove('dark-mode');
 }
+const savedColor = localStorage.getItem('color');
+if (savedColor){
+    document.body.classList.add(savedColor);
+}
+
+const set_color_elements = document.getElementsByClassName("set-color");
+
+for (let i = 0; i < set_color_elements.length; i++) {
+    const element = set_color_elements[i];
+    
+    element.addEventListener("click", e=>{
+        let svg;
+        let color;
+        if (e.target.tagName === "circle") {
+            svg = e.target.closest("svg");
+        }
+        else{
+            svg = e.target;
+        }
+        svg.classList.forEach(cl => {
+            if(cl.includes("color-")){
+                color = cl;
+                localStorage.setItem('color',cl);
+            }
+        });
+
+        document.body.classList.forEach(cl => {
+            if(cl.includes("color-")){
+                document.body.classList.remove(cl);
+            }
+        });
+
+        document.body.classList.add(color);
+
+        
+    });
+    
+}
+
 
 function toggleDarkMode(){
     document.body.classList.toggle('dark-mode');

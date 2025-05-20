@@ -1,50 +1,118 @@
-$background-light: aqua;
 $text-light: white;
-
-$background-dark: rgb(4, 88, 88);
 $text-dark: rgb(223, 223, 223);
+
+$backgrounds-light: (
+    blue: aqua,
+    orange: orange,
+    purple: rgb(204, 0, 255)
+);
+
+$backgrounds-dark: (
+    blue: rgb(4, 88, 88),
+    orange: rgb(138, 95, 17),
+    purple: rgb(128, 0, 160)
+
+);
 
 $padding: 5px;
 
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
-@mixin theme($isLight){
+@mixin theme($isLight, $color){
     @if $isLight == true{
-        background-color: $background-light;
+        background-color: map-get($backgrounds-light, $color);
         color: $text-light;
     }
     @else{
-        background-color: $background-dark;
+        background-color: map-get($backgrounds-dark, $color);
         color: $text-dark;
     }
 }
 
-@mixin themeButton($isLight){
+@mixin themeButton($isLight, $color){
     @if $isLight == true{
         background-color: $text-light;
-        color: $background-light;
+        color: map-get($backgrounds-light, $color);
     }
     @else{
         background-color: $text-dark;
-        color: $background-dark;
+        color: map-get($backgrounds-dark, $color);
     }
 }
 
 @mixin applyTheme{
-    body.dark-mode &{
-        @include theme(false);
+    @each $name, $bg in $backgrounds-light {
+        body.color-#{$name}.dark-mode & {
+            @include theme(false, $name);
+        }
+        body.color-#{$name}:not(.dark-mode) & {
+          @include theme(true, $name);
+        }
     }
+
+    // default
     body:not(.dark-mode) &{
-        @include theme(true);
+        @include theme(true, blue);
+    }
+    body.dark-mode &{
+        @include theme(false, blue);
     }  
 }
 
 @mixin applyButtonTheme{
-    body.dark-mode &{
-        @include themeButton(false);
+    @each $name, $bg in $backgrounds-light {
+        body.color-#{$name}.dark-mode & {
+            @include themeButton(false, $name);
+        }
+        body.color-#{$name}:not(.dark-mode) & {
+          @include themeButton(true, $name);
+        }
     }
+
+    // default
     body:not(.dark-mode) &{
-        @include themeButton(true);
+        @include themeButton(true, blue);
+    }
+    body.dark-mode &{
+        @include themeButton(false, blue);
+    }
+}
+
+@mixin applyThemeSelf {
+    @each $name, $bg in $backgrounds-light {
+      body.dark-mode &.color-#{$name} {
+        @include theme(false, $name);
+      }
+      body:not(.dark-mode) &.color-#{$name} {
+        @include theme(true, $name);
+      }
+    }
+  
+    // Default fallback (no color class)
+    body.dark-mode & {
+      @include theme(false, blue);
+    }
+    body:not(.dark-mode) & {
+      @include theme(true, blue);
+    }
+}
+
+@mixin applyButtonThemeSelf {
+    @each $name, $bg in $backgrounds-light {
+      body.dark-mode &.color-#{$name} {
+        @include themeButton(false, $name);
+      }
+      body:not(.dark-mode) &.color-#{$name} {
+        @include themeButton(true, $name);
+      }
+    }
+  
+    // Default fallback (no color class)
+    body.dark-mode & {
+      @include themeButton(false, blue);
+    }
+    body:not(.dark-mode) & {
+      @include themeButton(true, blue);
     }
 }
 
@@ -96,13 +164,23 @@ body{
 
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15), -1px -1px 2px rgba(255, 255, 255, 0.15);
 
-    :not(.dark-mode) &{
-        @include theme(true);
+    @each $name, $bg in $backgrounds-light {
+        &.color-#{$name}.dark-mode{
+            @include theme(false, $name);
+        }
+        &.color-#{$name}:not(.dark-mode){
+          @include theme(true, $name);
+        }
+    }
+
+    // default
+    &:not(.dark-mode){
+        @include theme(true, blue);
+    }
+    &.dark-mode{
+        @include theme(false, blue);
     }
     
-}
-body.dark-mode{
-    @include theme(false);
 }
 body.fade-in{
     opacity: 1;
@@ -240,8 +318,39 @@ footer{
     position: absolute;
     bottom: 10px;
     left: 10px;
+    width: calc(100vw - 10px);
 }
 
 label{
     user-select: none;
+}
+
+.menu-container {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    flex-direction: row-reverse;
+  
+    .menu-content {
+      z-index: 100;
+  
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(5px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+      pointer-events: none;
+
+      @include applyThemeSelf;
+    }
+  
+    &:hover .menu-content,
+    .menu-content:hover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition-delay: 0s;
+      pointer-events: auto;
+    }
 }
