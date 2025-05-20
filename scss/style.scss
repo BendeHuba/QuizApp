@@ -225,6 +225,8 @@ body.fade-in{
     &#button-dark-mode{
         @extend .button;
 
+        @include applyTheme();
+
         border-radius: 10px;
 
         display: flex;
@@ -234,8 +236,9 @@ body.fade-in{
         height: 40px;
 
         &:hover{
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
+            @include applyButtonTheme();
         }
 
         #button-dark-mode-light{
@@ -329,8 +332,9 @@ label{
     display: flex;
     position: absolute;
     right: 10px;
-    bottom: 10px;
+    bottom: 0px;
 
+    margin: 0 auto;
     flex-direction: row-reverse;
   
     .menu-content {
@@ -338,18 +342,47 @@ label{
   
       opacity: 0;
       visibility: hidden;
-      transform: translateY(5px);
-      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+      transform: translateX(5px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s, fill 0.5s linear, color 0.2s linear, stroke-width 0.2s linear;
       pointer-events: none;
 
-      @include applyThemeSelf;
+      stroke-width: 7px;
+
+      width: 40px;
+      height: 40px;
+      padding: 0px;
+
+      body.dark-mode &{
+        stroke: $text-dark;
+      }
+      body:not(.dark-mode) &{
+        stroke: $text-light;
+      }
+
+    //   &:hover{
+    //     @include applyThemeSelf;
+    //     & #color-palette{
+    //         @include applyThemeSelf;
+    //     }
+    //   }
+      &:hover{
+        stroke-width: 5px;
+      }
+      @include applyButtonThemeSelf;
     }
-  
+
+    & #color-palette{
+        @include applyTheme;
+    }
+    &:hover #color-palette{
+        @include applyButtonTheme;
+    }
+
     &:hover .menu-content,
     .menu-content:hover {
       opacity: 1;
       visibility: visible;
-      transform: translateY(0);
+      transform: translateX(0);
       transition-delay: 0s;
       pointer-events: auto;
     }

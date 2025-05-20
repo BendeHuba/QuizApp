@@ -146,9 +146,73 @@ body.dark-mode .button-to-go:hover, body.dark-mode .button-to-go:focus {
   width: 40px;
   height: 40px;
 }
+body.color-blue.dark-mode .button#button-dark-mode {
+  background-color: rgb(4, 88, 88);
+  color: rgb(223, 223, 223);
+}
+body.color-blue:not(.dark-mode) .button#button-dark-mode {
+  background-color: aqua;
+  color: white;
+}
+body.color-orange.dark-mode .button#button-dark-mode {
+  background-color: rgb(138, 95, 17);
+  color: rgb(223, 223, 223);
+}
+body.color-orange:not(.dark-mode) .button#button-dark-mode {
+  background-color: orange;
+  color: white;
+}
+body.color-purple.dark-mode .button#button-dark-mode {
+  background-color: rgb(128, 0, 160);
+  color: rgb(223, 223, 223);
+}
+body.color-purple:not(.dark-mode) .button#button-dark-mode {
+  background-color: rgb(204, 0, 255);
+  color: white;
+}
+body:not(.dark-mode) .button#button-dark-mode {
+  background-color: aqua;
+  color: white;
+}
+body.dark-mode .button#button-dark-mode {
+  background-color: rgb(4, 88, 88);
+  color: rgb(223, 223, 223);
+}
 .button#button-dark-mode:hover {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+}
+body.color-blue.dark-mode .button#button-dark-mode:hover {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
+}
+body.color-blue:not(.dark-mode) .button#button-dark-mode:hover {
+  background-color: white;
+  color: aqua;
+}
+body.color-orange.dark-mode .button#button-dark-mode:hover {
+  background-color: rgb(223, 223, 223);
+  color: rgb(138, 95, 17);
+}
+body.color-orange:not(.dark-mode) .button#button-dark-mode:hover {
+  background-color: white;
+  color: orange;
+}
+body.color-purple.dark-mode .button#button-dark-mode:hover {
+  background-color: rgb(223, 223, 223);
+  color: rgb(128, 0, 160);
+}
+body.color-purple:not(.dark-mode) .button#button-dark-mode:hover {
+  background-color: white;
+  color: rgb(204, 0, 255);
+}
+body:not(.dark-mode) .button#button-dark-mode:hover {
+  background-color: white;
+  color: aqua;
+}
+body.dark-mode .button#button-dark-mode:hover {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
 }
 .button#button-dark-mode #button-dark-mode-light {
   padding: 0px;
@@ -320,54 +384,132 @@ label {
   display: flex;
   position: absolute;
   right: 10px;
-  bottom: 10px;
+  bottom: 0px;
+  margin: 0 auto;
   flex-direction: row-reverse;
 }
 .menu-container .menu-content {
   z-index: 100;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(5px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+  transform: translateX(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s, fill 0.5s linear, color 0.2s linear, stroke-width 0.2s linear;
   pointer-events: none;
+  stroke-width: 7px;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+}
+body.dark-mode .menu-container .menu-content {
+  stroke: rgb(223, 223, 223);
+}
+body:not(.dark-mode) .menu-container .menu-content {
+  stroke: white;
+}
+.menu-container .menu-content:hover {
+  stroke-width: 5px;
 }
 body.dark-mode .menu-container .menu-content.color-blue {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
+}
+body:not(.dark-mode) .menu-container .menu-content.color-blue {
+  background-color: white;
+  color: aqua;
+}
+body.dark-mode .menu-container .menu-content.color-orange {
+  background-color: rgb(223, 223, 223);
+  color: rgb(138, 95, 17);
+}
+body:not(.dark-mode) .menu-container .menu-content.color-orange {
+  background-color: white;
+  color: orange;
+}
+body.dark-mode .menu-container .menu-content.color-purple {
+  background-color: rgb(223, 223, 223);
+  color: rgb(128, 0, 160);
+}
+body:not(.dark-mode) .menu-container .menu-content.color-purple {
+  background-color: white;
+  color: rgb(204, 0, 255);
+}
+body.dark-mode .menu-container .menu-content {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
+}
+body:not(.dark-mode) .menu-container .menu-content {
+  background-color: white;
+  color: aqua;
+}
+body.color-blue.dark-mode .menu-container #color-palette {
   background-color: rgb(4, 88, 88);
   color: rgb(223, 223, 223);
 }
-body:not(.dark-mode) .menu-container .menu-content.color-blue {
+body.color-blue:not(.dark-mode) .menu-container #color-palette {
   background-color: aqua;
   color: white;
 }
-body.dark-mode .menu-container .menu-content.color-orange {
+body.color-orange.dark-mode .menu-container #color-palette {
   background-color: rgb(138, 95, 17);
   color: rgb(223, 223, 223);
 }
-body:not(.dark-mode) .menu-container .menu-content.color-orange {
+body.color-orange:not(.dark-mode) .menu-container #color-palette {
   background-color: orange;
   color: white;
 }
-body.dark-mode .menu-container .menu-content.color-purple {
+body.color-purple.dark-mode .menu-container #color-palette {
   background-color: rgb(128, 0, 160);
   color: rgb(223, 223, 223);
 }
-body:not(.dark-mode) .menu-container .menu-content.color-purple {
+body.color-purple:not(.dark-mode) .menu-container #color-palette {
   background-color: rgb(204, 0, 255);
   color: white;
 }
-body.dark-mode .menu-container .menu-content {
+body:not(.dark-mode) .menu-container #color-palette {
+  background-color: aqua;
+  color: white;
+}
+body.dark-mode .menu-container #color-palette {
   background-color: rgb(4, 88, 88);
   color: rgb(223, 223, 223);
 }
-body:not(.dark-mode) .menu-container .menu-content {
-  background-color: aqua;
-  color: white;
+body.color-blue.dark-mode .menu-container:hover #color-palette {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
+}
+body.color-blue:not(.dark-mode) .menu-container:hover #color-palette {
+  background-color: white;
+  color: aqua;
+}
+body.color-orange.dark-mode .menu-container:hover #color-palette {
+  background-color: rgb(223, 223, 223);
+  color: rgb(138, 95, 17);
+}
+body.color-orange:not(.dark-mode) .menu-container:hover #color-palette {
+  background-color: white;
+  color: orange;
+}
+body.color-purple.dark-mode .menu-container:hover #color-palette {
+  background-color: rgb(223, 223, 223);
+  color: rgb(128, 0, 160);
+}
+body.color-purple:not(.dark-mode) .menu-container:hover #color-palette {
+  background-color: white;
+  color: rgb(204, 0, 255);
+}
+body:not(.dark-mode) .menu-container:hover #color-palette {
+  background-color: white;
+  color: aqua;
+}
+body.dark-mode .menu-container:hover #color-palette {
+  background-color: rgb(223, 223, 223);
+  color: rgb(4, 88, 88);
 }
 .menu-container:hover .menu-content,
 .menu-container .menu-content:hover {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(0);
   transition-delay: 0s;
   pointer-events: auto;
 }
