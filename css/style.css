@@ -531,6 +531,10 @@ body.dark-mode .menu-container:hover #color-palette {
   width: 75%;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .game-create-type label {
   padding: 2px 0px 2px 6px;
   flex-basis: 100%;
