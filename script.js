@@ -40,13 +40,13 @@ for (let i = 0; i < set_color_elements.length; i++) {
             }
         });
 
+        document.body.classList.add(color);
+
         document.body.classList.forEach(cl => {
-            if(cl.includes("color-")){
+            if(cl.includes("color-") && cl != color){
                 document.body.classList.remove(cl);
             }
         });
-
-        document.body.classList.add(color);
 
         
     });
@@ -138,3 +138,35 @@ home?.addEventListener("click", async e=>{
 window.onload = function() {
   document.body.classList.add('fade-in');
 }
+
+const textareas = document.querySelectorAll('textarea');
+
+textareas.forEach(ta => {
+    ta.style.height = `${ta.scrollHeight}px`;
+    if(ta.classList.contains("oneline")){
+        const measure = () => {
+            ta.style.width = 'fit-content';
+            const scrollWidth = ta.scrollWidth + 2;
+            const maxWidth = ta.parentElement.clientWidth || window.innerWidth;
+            ta.style.width = `${Math.min(scrollWidth, maxWidth)}px`;
+        };
+
+        ta.addEventListener('keydown', e => {
+            if (e.key === 'Enter') e.preventDefault();
+            measure();
+        });
+        
+        ta.addEventListener('input', e => {
+            ta.value = ta.value.replace(/[\r\n]+/g, ' ');
+            measure();
+        });
+        measure();
+    }
+    else{
+        ta.addEventListener("input",e=>{
+            ta.style.height = 'auto';
+            ta.style.height = `${ta.scrollHeight}px`;
+        });
+    }
+    
+});

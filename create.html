@@ -12,11 +12,36 @@
             <p class="button-to-go" id="home">Home</p>
         </div>
     </header>
-    <div class="container">
-        <input type="radio" name="game-choice" id="game-free">
-        <label for="game-free">Free choice game</label>
-        <input type="radio" name="game-choice" id="game-mult">
-        <label for="game-mult">Multiple choice game</label>
+    <div class="container w-75 flex-center">
+        <div class="game-create-type">
+            <label class="button" for="game-free">
+                <span>Free choice game</span>
+                <input type="radio" name="game-choice" id="game-free" checked>
+            </label>
+            <label class="button" for="game-mult">
+                Multiple choice game
+                <input type="radio" name="game-choice" id="game-mult">
+            </label>
+        </div>
+        
+        <div class="game-create">
+            <label for="game-question">
+                <span>Your quiz question</span>
+                <br>
+                <textarea id="game-question" rows="1"></textarea>
+                <br>
+            </label>
+            <label for="game-awnser-free">
+                <span>The right awnser</span>
+                <br>
+                <textarea class="oneline" id="game-awnser-free" rows="1"></textarea>
+                <br>
+            </label>
+            <!-- <label for="game-non-case-sensitive">
+                <span>Is it case sensitive?</span>
+                <input type="checkbox" id="game-non-case-sensitive">
+            </label> -->
+        </div>
     </div>
     <footer>
         <button id="button-dark-mode" class="button" style="padding: 3px;">
