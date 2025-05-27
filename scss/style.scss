@@ -425,9 +425,6 @@ label{
             margin: 0px;
         }
         &:has(input[type="radio"]:checked) {
-            // background-color: #1f1f1f;
-            // color: white;
-            // border-color: #388e3c;
             @include applyButtonTheme();
 
         }
