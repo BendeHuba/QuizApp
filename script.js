@@ -300,7 +300,7 @@ game_create_button?.addEventListener("click",()=>{
         created: new Date().toISOString(),
         freeGame: gameMode,
         answer: answerText,
-        wrongAwnsers: wrongAnswers
+        awnsers: wrongAnswers
     };
 
     const jsonString = JSON.stringify(data, null, 2);
