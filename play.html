@@ -7,7 +7,22 @@
     <title>QuizApp - Play</title>
 </head>
 <body>
-    
+    <header>
+        <div class="navbar">
+            <p class="button-to-go" id="home">Home</p>
+        </div>
+    </header>
+    <div id="upload-quiz" class="center-box button-to-go">
+        Upload Quiz
+        <input type="file" id="quiz-file-input" accept=".json" style="display: none;">
+    </div>
+    <div class="container w-75 flex-center">
+        <div class="game-play-type w-100 text-center">
+            <div id="game-play-question">
+                
+            </div>
+        </div>
+    </div>
     <footer>
         <button id="button-dark-mode" class="button" style="padding: 3px;">
             <svg id="button-dark-mode-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-icon">

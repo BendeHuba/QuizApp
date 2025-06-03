@@ -30,6 +30,22 @@ body.color-purple:not(.dark-mode) {
   background-color: rgb(204, 0, 255);
   color: white;
 }
+body.color-red.dark-mode {
+  background-color: rgb(158, 34, 34);
+  color: rgb(223, 223, 223);
+}
+body.color-red:not(.dark-mode) {
+  background-color: rgb(206, 13, 13);
+  color: white;
+}
+body.color-green.dark-mode {
+  background-color: rgb(13, 133, 13);
+  color: rgb(223, 223, 223);
+}
+body.color-green:not(.dark-mode) {
+  background-color: rgb(18, 202, 18);
+  color: white;
+}
 body:not(.dark-mode) {
   background-color: aqua;
   color: white;
@@ -87,6 +103,22 @@ body.color-purple:not(.dark-mode) .button, body.color-purple:not(.dark-mode) .bu
   background-color: white;
   color: rgb(204, 0, 255);
 }
+body.color-red.dark-mode .button, body.color-red.dark-mode .button#button-dark-mode {
+  background-color: rgb(223, 223, 223);
+  color: rgb(158, 34, 34);
+}
+body.color-red:not(.dark-mode) .button, body.color-red:not(.dark-mode) .button#button-dark-mode {
+  background-color: white;
+  color: rgb(206, 13, 13);
+}
+body.color-green.dark-mode .button, body.color-green.dark-mode .button#button-dark-mode {
+  background-color: rgb(223, 223, 223);
+  color: rgb(13, 133, 13);
+}
+body.color-green:not(.dark-mode) .button, body.color-green:not(.dark-mode) .button#button-dark-mode {
+  background-color: white;
+  color: rgb(18, 202, 18);
+}
 body:not(.dark-mode) .button, body:not(.dark-mode) .button#button-dark-mode {
   background-color: white;
   color: aqua;
@@ -130,6 +162,22 @@ body.color-purple:not(.dark-mode) .button-to-go:hover, body.color-purple:not(.da
   background-color: white;
   color: rgb(204, 0, 255);
 }
+body.color-red.dark-mode .button-to-go:hover, body.color-red.dark-mode .button-to-go:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(158, 34, 34);
+}
+body.color-red:not(.dark-mode) .button-to-go:hover, body.color-red:not(.dark-mode) .button-to-go:focus {
+  background-color: white;
+  color: rgb(206, 13, 13);
+}
+body.color-green.dark-mode .button-to-go:hover, body.color-green.dark-mode .button-to-go:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(13, 133, 13);
+}
+body.color-green:not(.dark-mode) .button-to-go:hover, body.color-green:not(.dark-mode) .button-to-go:focus {
+  background-color: white;
+  color: rgb(18, 202, 18);
+}
 body:not(.dark-mode) .button-to-go:hover, body:not(.dark-mode) .button-to-go:focus {
   background-color: white;
   color: aqua;
@@ -170,6 +218,22 @@ body.color-purple:not(.dark-mode) .button#button-dark-mode {
   background-color: rgb(204, 0, 255);
   color: white;
 }
+body.color-red.dark-mode .button#button-dark-mode {
+  background-color: rgb(158, 34, 34);
+  color: rgb(223, 223, 223);
+}
+body.color-red:not(.dark-mode) .button#button-dark-mode {
+  background-color: rgb(206, 13, 13);
+  color: white;
+}
+body.color-green.dark-mode .button#button-dark-mode {
+  background-color: rgb(13, 133, 13);
+  color: rgb(223, 223, 223);
+}
+body.color-green:not(.dark-mode) .button#button-dark-mode {
+  background-color: rgb(18, 202, 18);
+  color: white;
+}
 body:not(.dark-mode) .button#button-dark-mode {
   background-color: aqua;
   color: white;
@@ -205,6 +269,22 @@ body.color-purple.dark-mode .button#button-dark-mode:hover {
 body.color-purple:not(.dark-mode) .button#button-dark-mode:hover {
   background-color: white;
   color: rgb(204, 0, 255);
+}
+body.color-red.dark-mode .button#button-dark-mode:hover {
+  background-color: rgb(223, 223, 223);
+  color: rgb(158, 34, 34);
+}
+body.color-red:not(.dark-mode) .button#button-dark-mode:hover {
+  background-color: white;
+  color: rgb(206, 13, 13);
+}
+body.color-green.dark-mode .button#button-dark-mode:hover {
+  background-color: rgb(223, 223, 223);
+  color: rgb(13, 133, 13);
+}
+body.color-green:not(.dark-mode) .button#button-dark-mode:hover {
+  background-color: white;
+  color: rgb(18, 202, 18);
 }
 body:not(.dark-mode) .button#button-dark-mode:hover {
   background-color: white;
@@ -299,6 +379,22 @@ body.color-purple:not(.dark-mode) .main-header #button-to-create:hover, body.col
   background-color: white;
   color: rgb(204, 0, 255);
 }
+body.color-red.dark-mode .main-header #button-to-create:hover, body.color-red.dark-mode .main-header #button-to-create:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(158, 34, 34);
+}
+body.color-red:not(.dark-mode) .main-header #button-to-create:hover, body.color-red:not(.dark-mode) .main-header #button-to-create:focus {
+  background-color: white;
+  color: rgb(206, 13, 13);
+}
+body.color-green.dark-mode .main-header #button-to-create:hover, body.color-green.dark-mode .main-header #button-to-create:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(13, 133, 13);
+}
+body.color-green:not(.dark-mode) .main-header #button-to-create:hover, body.color-green:not(.dark-mode) .main-header #button-to-create:focus {
+  background-color: white;
+  color: rgb(18, 202, 18);
+}
 body:not(.dark-mode) .main-header #button-to-create:hover, body:not(.dark-mode) .main-header #button-to-create:focus {
   background-color: white;
   color: aqua;
@@ -349,6 +445,22 @@ body.color-purple.dark-mode .main-header #button-to-play:hover, body.color-purpl
 body.color-purple:not(.dark-mode) .main-header #button-to-play:hover, body.color-purple:not(.dark-mode) .main-header #button-to-play:focus {
   background-color: white;
   color: rgb(204, 0, 255);
+}
+body.color-red.dark-mode .main-header #button-to-play:hover, body.color-red.dark-mode .main-header #button-to-play:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(158, 34, 34);
+}
+body.color-red:not(.dark-mode) .main-header #button-to-play:hover, body.color-red:not(.dark-mode) .main-header #button-to-play:focus {
+  background-color: white;
+  color: rgb(206, 13, 13);
+}
+body.color-green.dark-mode .main-header #button-to-play:hover, body.color-green.dark-mode .main-header #button-to-play:focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(13, 133, 13);
+}
+body.color-green:not(.dark-mode) .main-header #button-to-play:hover, body.color-green:not(.dark-mode) .main-header #button-to-play:focus {
+  background-color: white;
+  color: rgb(18, 202, 18);
 }
 body:not(.dark-mode) .main-header #button-to-play:hover, body:not(.dark-mode) .main-header #button-to-play:focus {
   background-color: white;
@@ -433,6 +545,22 @@ body:not(.dark-mode) .menu-container .menu-content.color-purple {
   background-color: white;
   color: rgb(204, 0, 255);
 }
+body.dark-mode .menu-container .menu-content.color-red {
+  background-color: rgb(223, 223, 223);
+  color: rgb(158, 34, 34);
+}
+body:not(.dark-mode) .menu-container .menu-content.color-red {
+  background-color: white;
+  color: rgb(206, 13, 13);
+}
+body.dark-mode .menu-container .menu-content.color-green {
+  background-color: rgb(223, 223, 223);
+  color: rgb(13, 133, 13);
+}
+body:not(.dark-mode) .menu-container .menu-content.color-green {
+  background-color: white;
+  color: rgb(18, 202, 18);
+}
 body.dark-mode .menu-container .menu-content {
   background-color: rgb(223, 223, 223);
   color: rgb(4, 88, 88);
@@ -463,6 +591,22 @@ body.color-purple.dark-mode .menu-container #color-palette {
 }
 body.color-purple:not(.dark-mode) .menu-container #color-palette {
   background-color: rgb(204, 0, 255);
+  color: white;
+}
+body.color-red.dark-mode .menu-container #color-palette {
+  background-color: rgb(158, 34, 34);
+  color: rgb(223, 223, 223);
+}
+body.color-red:not(.dark-mode) .menu-container #color-palette {
+  background-color: rgb(206, 13, 13);
+  color: white;
+}
+body.color-green.dark-mode .menu-container #color-palette {
+  background-color: rgb(13, 133, 13);
+  color: rgb(223, 223, 223);
+}
+body.color-green:not(.dark-mode) .menu-container #color-palette {
+  background-color: rgb(18, 202, 18);
   color: white;
 }
 body:not(.dark-mode) .menu-container #color-palette {
@@ -497,6 +641,22 @@ body.color-purple:not(.dark-mode) .menu-container:hover #color-palette {
   background-color: white;
   color: rgb(204, 0, 255);
 }
+body.color-red.dark-mode .menu-container:hover #color-palette {
+  background-color: rgb(223, 223, 223);
+  color: rgb(158, 34, 34);
+}
+body.color-red:not(.dark-mode) .menu-container:hover #color-palette {
+  background-color: white;
+  color: rgb(206, 13, 13);
+}
+body.color-green.dark-mode .menu-container:hover #color-palette {
+  background-color: rgb(223, 223, 223);
+  color: rgb(13, 133, 13);
+}
+body.color-green:not(.dark-mode) .menu-container:hover #color-palette {
+  background-color: white;
+  color: rgb(18, 202, 18);
+}
 body:not(.dark-mode) .menu-container:hover #color-palette {
   background-color: white;
   color: aqua;
@@ -522,13 +682,85 @@ body.dark-mode .menu-container:hover #color-palette {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: center;
+  flex-direction: column;
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
+.w-5 {
+  width: 5%;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-15 {
+  width: 15%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-55 {
+  width: 55%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-65 {
+  width: 65%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
 .w-75 {
   width: 75%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-95 {
+  width: 95%;
 }
 
 .w-100 {
@@ -566,6 +798,22 @@ body.color-purple.dark-mode .game-create-type label {
 }
 body.color-purple:not(.dark-mode) .game-create-type label {
   background-color: rgb(204, 0, 255);
+  color: white;
+}
+body.color-red.dark-mode .game-create-type label {
+  background-color: rgb(158, 34, 34);
+  color: rgb(223, 223, 223);
+}
+body.color-red:not(.dark-mode) .game-create-type label {
+  background-color: rgb(206, 13, 13);
+  color: white;
+}
+body.color-green.dark-mode .game-create-type label {
+  background-color: rgb(13, 133, 13);
+  color: rgb(223, 223, 223);
+}
+body.color-green:not(.dark-mode) .game-create-type label {
+  background-color: rgb(18, 202, 18);
   color: white;
 }
 body:not(.dark-mode) .game-create-type label {
@@ -607,6 +855,22 @@ body.color-purple:not(.dark-mode) .game-create-type label:has(input[type=radio]:
   background-color: white;
   color: rgb(204, 0, 255);
 }
+body.color-red.dark-mode .game-create-type label:has(input[type=radio]:checked) {
+  background-color: rgb(223, 223, 223);
+  color: rgb(158, 34, 34);
+}
+body.color-red:not(.dark-mode) .game-create-type label:has(input[type=radio]:checked) {
+  background-color: white;
+  color: rgb(206, 13, 13);
+}
+body.color-green.dark-mode .game-create-type label:has(input[type=radio]:checked) {
+  background-color: rgb(223, 223, 223);
+  color: rgb(13, 133, 13);
+}
+body.color-green:not(.dark-mode) .game-create-type label:has(input[type=radio]:checked) {
+  background-color: white;
+  color: rgb(18, 202, 18);
+}
 body:not(.dark-mode) .game-create-type label:has(input[type=radio]:checked) {
   background-color: white;
   color: aqua;
@@ -638,6 +902,22 @@ body.color-purple.dark-mode .game-create-type label:not(:has(input[type=radio]:c
 body.color-purple:not(.dark-mode) .game-create-type label:not(:has(input[type=radio]:checked)):hover, body.color-purple:not(.dark-mode) .game-create-type label:not(:has(input[type=radio]:checked)):focus {
   background-color: white;
   color: rgb(204, 0, 255);
+}
+body.color-red.dark-mode .game-create-type label:not(:has(input[type=radio]:checked)):hover, body.color-red.dark-mode .game-create-type label:not(:has(input[type=radio]:checked)):focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(158, 34, 34);
+}
+body.color-red:not(.dark-mode) .game-create-type label:not(:has(input[type=radio]:checked)):hover, body.color-red:not(.dark-mode) .game-create-type label:not(:has(input[type=radio]:checked)):focus {
+  background-color: white;
+  color: rgb(206, 13, 13);
+}
+body.color-green.dark-mode .game-create-type label:not(:has(input[type=radio]:checked)):hover, body.color-green.dark-mode .game-create-type label:not(:has(input[type=radio]:checked)):focus {
+  background-color: rgb(223, 223, 223);
+  color: rgb(13, 133, 13);
+}
+body.color-green:not(.dark-mode) .game-create-type label:not(:has(input[type=radio]:checked)):hover, body.color-green:not(.dark-mode) .game-create-type label:not(:has(input[type=radio]:checked)):focus {
+  background-color: white;
+  color: rgb(18, 202, 18);
 }
 body:not(.dark-mode) .game-create-type label:not(:has(input[type=radio]:checked)):hover, body:not(.dark-mode) .game-create-type label:not(:has(input[type=radio]:checked)):focus {
   background-color: white;
@@ -687,6 +967,22 @@ body.color-purple:not(.dark-mode) textarea {
   background-color: white;
   color: rgb(204, 0, 255);
 }
+body.color-red.dark-mode textarea {
+  background-color: rgb(223, 223, 223);
+  color: rgb(158, 34, 34);
+}
+body.color-red:not(.dark-mode) textarea {
+  background-color: white;
+  color: rgb(206, 13, 13);
+}
+body.color-green.dark-mode textarea {
+  background-color: rgb(223, 223, 223);
+  color: rgb(13, 133, 13);
+}
+body.color-green:not(.dark-mode) textarea {
+  background-color: white;
+  color: rgb(18, 202, 18);
+}
 body:not(.dark-mode) textarea {
   background-color: white;
   color: aqua;
@@ -706,6 +1002,73 @@ textarea.oneline {
   flex: 1 1 300px;
   min-width: 280px;
   width: 100%;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+textarea.oneline.animate-fade-in {
+  animation: fadeSlideIn 200ms ease-out;
+}
+
+textarea.oneline {
+  transition: width 0.15s ease, height 0.15s ease;
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#other-awnsers.animate-show {
+  animation: fadeSlideDown 250ms ease-out;
+}
+
+#game-create-button {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#game-play-question {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 50px 0px;
+}
+
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.result-animate {
+  animation: fadeSlideUp 0.5s ease-out forwards;
 }
 
 /*# sourceMappingURL=style.css.map */
